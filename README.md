@@ -19,7 +19,7 @@ O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
 <code>
-provider "openstack" {  
+provider "openstack" { <br>
 	user_name   = "adailton" #Nome do usuario no openstack  	
 	password    = "123" #Senha do usuario  
 	tenant_name = "PRJ_ADAILTON" #Nome do projeto  
