@@ -18,7 +18,8 @@ O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.
 `$ git clone https://github.com/sadailton/terraform-script`
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
-<code>
+
+```
 provider "openstack" { <br>
 	user_name   = "adailton" #Nome do usuario no openstack  	
 	password    = "123" #Senha do usuario  
@@ -40,4 +41,4 @@ resource "openstack_compute_instance_v2" "adailton-saraiva" {
 
 	}	
 }
-</code>
+```
