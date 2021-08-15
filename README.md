@@ -23,7 +23,7 @@ $ git clone https://github.com/sadailton/terraform-script
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
 
-```bash
+```terraform
 #Configurando o provider OpenStack
 provider "openstack" {
 	user_name   = "adailton" #Nome do usuario no openstack  	
