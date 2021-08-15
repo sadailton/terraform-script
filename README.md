@@ -15,7 +15,8 @@ O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.
 
 2 - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
 ```$ cd terraform-adailton
-$ git clone https://github.com/sadailton/terraform-script```
+$ git clone https://github.com/sadailton/terraform-script
+```
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
 
