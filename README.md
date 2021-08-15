@@ -5,4 +5,8 @@ Script em Terraform para criar instancias no OpenStack
 `$ mkdir terraform-adailton`
 
 2 - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
+`$ cd terraform-adailton  
+$ git clone https://github.com/sadailton/terraform-script`
+
+3 - 
 
