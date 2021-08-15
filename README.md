@@ -14,13 +14,14 @@ O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.
 `$ mkdir terraform-adailton`
 
 2 - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
-`$ cd terraform-adailton`  
-`$ git clone https://github.com/sadailton/terraform-script`
+```$ cd terraform-adailton
+$ git clone https://github.com/sadailton/terraform-script```
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
 
-```
-provider "openstack" { <br>
+```php
+#Configurando o provider OpenStack
+provider "openstack" {
 	user_name   = "adailton" #Nome do usuario no openstack  	
 	password    = "123" #Senha do usuario  
 	tenant_name = "PRJ_ADAILTON" #Nome do projeto  
@@ -29,7 +30,7 @@ provider "openstack" { <br>
 	insecure    = "true"  
 }  
 	
-
+#Configurando a instância a ser criada.
 resource "openstack_compute_instance_v2" "adailton-saraiva" {	
 	count = 2	
 	name = "terraform-vm-${count.index + 1}"	
