@@ -18,8 +18,7 @@ O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.
 `$ git clone https://github.com/sadailton/terraform-script`
 
 3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:
-<code>
-# Configure the OpenStack Provider	
+<code>	
 provider "openstack" {
 	user_name   = "adailton" #Nome do usuario no openstack	
 	password    = "123" #Senha do usuario	
@@ -29,7 +28,7 @@ provider "openstack" {
 	insecure    = "true"	
 }	
 	
-# Cria duas instancias com o docker instalado.	
+
 resource "openstack_compute_instance_v2" "adailton-saraiva" {	
 	count = 2	
 	name = "terraform-vm-${count.index + 1}"	
@@ -40,5 +39,5 @@ resource "openstack_compute_instance_v2" "adailton-saraiva" {
 		name = "minha_rede" #nome da rede	
 
 	}	
-} 	
+}
 </code>
