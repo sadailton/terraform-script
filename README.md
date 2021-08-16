@@ -21,32 +21,47 @@ $ cd terraform-adailton
 $ git clone https://github.com/sadailton/terraform-script
 ```
 
-**3** - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
+**3** - Abra o arquivo provider.tf e preencha o valor das variáveis com o seu login, nome do projeto e id do projeto. Segue abaixo um exemplo:  
 
-```terraform
-#Configurando o provider OpenStack
+```terraform	
+terraform {
+        required_version = ">= 0.14.0"
+        required_providers {
+                openstack = {
+                        source  = "terraform-provider-openstack/openstack"
+                        version = "~> 1.43.0"
+                }
+        }
+}
+
+# Configure the OpenStack Provider
 provider "openstack" {
-	user_name   = "adailton" #Nome do usuario no openstack  	
-	password    = "123" #Senha do usuario  
-	tenant_name = "PRJ_ADAILTON" #Nome do projeto  
-	tenant_id   = "724ea70fa7774d69a2143714b5ca2e50" #ID do projeto  
-	auth_url    = "https://20.137.75.159:5000"  
-	cacert_file = "./root.crt"
-	insecure    = "true"  
-}  
-	
-#Configurando a instância a ser criada.
-resource "openstack_compute_instance_v2" "adailton-saraiva" {	
-	count 		= 2	
-	name 		= "terraform-vm-${count.index + 1}"	
-	image_name 	= "ubuntu-20.04.1-server-64bit"	
-	flavor_name 	= "c2.small"	
-	user_data 	= file("./cloud-init.config")	
-	network {	
-		name = "minha_rede" #nome da rede	
-
-	}	
+        user_name       = "adailton"                            #Nome do usuario no openstack
+        password        = "123456"                              #Senha do usuario
+        tenant_name     = "MEU_PROJETO"                         #Nome do projeto
+        tenant_id       = "724ea70fa7774d69a2143714000000"      #ID do projeto
+        auth_url        = "https://200.137.75.159:5000"
+        cacert_file     = "./root.crt"
+        insecure        = "true"
 }
 ```
 
-**4** - 
+**4** - Execute o comando `terraform init` para instalar o plugin do openstack.  
+```bash
+$ terraform init
+```
+
+**5** - Configura o que será executado pelo terraform.  
+```bash
+$ terraform plan
+```
+
+**6** - Execute o script para criar a infraestrutura no OpenStack. Logue no OpenStack para conferir os elementos serem criados.  
+```bash
+$ terraform apply
+```
+
+**7** - Caso queira apagar toda a estrutura criada, execute o comando `terraform destroy`.  
+```bash
+$ terraform destroy
+```
