@@ -1,6 +1,6 @@
 # Cria duas instancias com o docker instalado.
 resource "openstack_compute_instance_v2" "adailton-saraiva" {
-  	count = 1
+  	count = 2
   	name = "terraform-vm-${count.index + 1}"
   	image_name = "ubuntu-20.04.1-server-64bit"
   	flavor_name = "c2.small"
