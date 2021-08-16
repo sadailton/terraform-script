@@ -31,16 +31,17 @@ provider "openstack" {
 	tenant_name = "PRJ_ADAILTON" #Nome do projeto  
 	tenant_id   = "724ea70fa7774d69a2143714b5ca2e50" #ID do projeto  
 	auth_url    = "https://20.137.75.159:5000"  
+	cacert_file = "./root.crt"
 	insecure    = "true"  
 }  
 	
 #Configurando a instância a ser criada.
 resource "openstack_compute_instance_v2" "adailton-saraiva" {	
-	count = 2	
-	name = "terraform-vm-${count.index + 1}"	
-	image_name = "ubuntu-20.04.1-server-64bit"	
-	flavor_name = "c2.small"	
-	user_data = file("./cloud-init.config")	
+	count 		= 2	
+	name 		= "terraform-vm-${count.index + 1}"	
+	image_name 	= "ubuntu-20.04.1-server-64bit"	
+	flavor_name 	= "c2.small"	
+	user_data 	= file("./cloud-init.config")	
 	network {	
 		name = "minha_rede" #nome da rede	
 
