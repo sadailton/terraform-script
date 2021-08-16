@@ -1,11 +1,15 @@
 # terraform-script
-Script em Terraform para criar instancias no OpenStack
+Script em Terraform para criar instancias no OpenStack.  
 
 Este documento descreve como executar um script Terraform que cria instâncias no OpenStack.  
-Esse script foi escrito para o trabalho da disciplina de Computação em Nuvem do curso de Mestrado Profissional em Computação Aplicada do professor Maxwell.
+Esse script foi escrito para o trabalho da disciplina de Computação em Nuvem do curso de Mestrado Profissional em Computação Aplicada do professor Maxwell. O script executa as seguintes operações:
 
-Autor: Adailton Saraiva  
-Data: 15/08/2021
+* Cria a rede 192.168.109.0/24
+* Cria um roteador com uma interface na rede externa e outra na rede interna com o IP 192.168.109.1
+* Cria duas instâncias com 2GB de ram 2vCPUs e instala o docker via cloud-init (ver arquivo cloud-init.config).
+
+**Autor:** Adailton Saraiva  
+**Data:** 16/08/2021
 
 Para instalar o Terraform siga as instruções do site oficial: https://www.terraform.io/downloads.html.  
 O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.  
