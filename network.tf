@@ -17,7 +17,7 @@ resource "openstack_networking_subnet_v2" "subnet1" {
 
 resource "openstack_networking_router_v2" "router_1" {
 	name                = "tf-net-router"
-	external_network_id = "b32ae8ee-391a-4f6d-9307-30eedd6833a8"
+	external_network_id = "b32ae8ee-391a-4f6d-9307-30eedd6833a8" #ID da rede que está conectada a Internet
 }
 
 resource "openstack_networking_router_interface_v2" "router_interface_1" {
