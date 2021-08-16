@@ -10,15 +10,16 @@ Data: 15/08/2021
 Para instalar o Terraform siga as instruções do site oficial: https://www.terraform.io/downloads.html.  
 O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.  
 
-**1** - Crie uma pasta chamada terraform-adailton.  
+**1** - Crie uma pasta chamada terraform-project.  
 ```bash
-$ mkdir terraform-adailton
+$ mkdir terraform-project
 ```
 
-**2** - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
+**2** - Entre na pasta terraform-adailton e clone o repositório dentro dela. Em seguida entre no diretório do repositório.
 ```bash
-$ cd terraform-adailton
+$ cd terraform-project
 $ git clone https://github.com/sadailton/terraform-script
+$ cd terraform-script
 ```
 
 **3** - Abra o arquivo provider.tf e preencha o valor das variáveis com o seu login, nome do projeto e id do projeto. Segue abaixo um exemplo:  
