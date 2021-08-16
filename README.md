@@ -10,18 +10,18 @@ Data: 15/08/2021
 Para instalar o Terraform siga as instruções do site oficial: https://www.terraform.io/downloads.html.  
 O sistema utilizado para o desenvolvimento desse trabalho foi o ubuntu-20.04.  
 
-1 - Crie uma pasta chamada terraform-adailton.  
+**1** - Crie uma pasta chamada terraform-adailton.  
 ```bash
 $ mkdir terraform-adailton
 ```
 
-2 - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
+**2** - Entre na pasta terraform-adailton e clone o repositório dentro dela.  
 ```bash
 $ cd terraform-adailton
 $ git clone https://github.com/sadailton/terraform-script
 ```
 
-3 - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
+**3** - Abra o arquivo main.tf e preencha o valor das variáveis com o seu login, nome do projeto, id do projeto e nome da rede. Segue abaixo um exemplo:  
 
 ```terraform
 #Configurando o provider OpenStack
@@ -48,3 +48,5 @@ resource "openstack_compute_instance_v2" "adailton-saraiva" {
 	}	
 }
 ```
+
+**4** - 
